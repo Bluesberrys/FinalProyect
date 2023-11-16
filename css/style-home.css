@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif, Arial;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #2ab196;
+    position: sticky;
+    top: 0px;
+}
+.logo-main{
+    max-width: 5rem;
+    align-items: center;
+}
+.navbar{
+    overflow: hidden;
+    /* background-color: #333; */
+}
+.navbar a{
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbttn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbttn {
+    background-color: red;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+footer{
+    padding: 15px;
+    background-color: #9681bf;
+}
+.nav-list-foot{
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    gap: 2rem;
+    padding-top: 2%;
+}
+.nav-list-foot li a{
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+
+@media screen and (max-width: 768px){
+    .menu-open,
+    .menu-closed{
+        display: block;
+        border: 0;
+        font-size: 1.25rem;
+        background-color: transparent;
+        cursor: pointer;
+        color: black;
+    }
+    .nav{
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: #892be2;
+        padding: 2rem;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+    }
+    .nav.visible{
+        opacity: 1;
+        visibility: visible;
+    }
+    .nav-list{
+        flex-direction: column;
+        align-items: end;
+        padding-top: 0;
+    }
+    .nav-list li a{
+        color: black;
+    }
+}
+@media screen and (max-width:480px) {
+    footer{
+        font-size: 32px;
+    }
+    .nav-list-foot{
+        display:block;
+    }
+    .nav-list-foot li{
+        padding: 10px;
+    }
+    .nav-list-foot li a{
+        font-size: 32px;
+    }
+}
