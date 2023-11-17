@@ -24,6 +24,7 @@ header a{
     max-height: 70px;
 }
 .navbar{
+    width: 100%;
     overflow: hidden;
     padding: 10px;
     /* background-color: #333; */
@@ -36,6 +37,15 @@ header a{
     padding: 14px 16px;
     text-decoration: none;
 }
+.nav-list{
+    display: flex;
+    margin: 0;
+    list-style: none;
+}
+.nav-push{
+    margin-left: auto;
+}
+
 .dropdown {
     float: left;
     overflow: hidden;
@@ -53,13 +63,13 @@ header a{
 }
 
 .navbar a:hover, .dropdown:hover .dropbttn {
-    background-color: #7b00ff;
+    background-color: #8F3267;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: #8F3267;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -67,7 +77,7 @@ header a{
 
 .dropdown-content a {
     float: none;
-    color: black;
+    color: #fff;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -75,7 +85,7 @@ header a{
 }
 
 .dropdown-content a:hover {
-    background-color: #ddd;
+    background-color: #A55382;
 }
 
 .dropdown:hover .dropdown-content {
@@ -87,7 +97,9 @@ header a{
     align-items: center;
     
 }
-
+.head-menu-open, .head-menu-close{
+    display: none;
+}
 
 /* footer */
 footer{
@@ -107,4 +119,44 @@ footer{
     color: #ffffff;
     font-weight: bolder;
     font-size: 20px;
+}
+
+
+@media screen and (max-width: 425px) {
+    .head-menu-open,
+    .head-menu-close{
+        display: block;
+        border: 0;
+        font-size: 2rem;
+        background-color: transparent;
+        cursor: pointer;
+        color: #fff;
+    }
+    .head-menu-open{
+        margin-left: auto;
+    }
+    .navbar{
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: #A55382;
+        padding: 2rem;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+        min-height: 350px;
+    }
+    .navbar.visible{
+        opacity: 1;
+        visibility: visible;
+    }
+    .nav-list{
+        flex-direction: column;
+        align-items: end;
+        padding-top: 0;
+    }
 }

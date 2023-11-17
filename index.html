@@ -15,19 +15,25 @@
         <div class="logo">
             <a href="index.html"><img class="logo-img" src="./img/paw-logo-white.png"></a>
         </div>
-        <div class="navbar">
-            <div class="dropdown">
-                <button class="dropbttn"><i class="bi bi-caret-down-fill"></i> Clothes</button>
-                <div class="dropdown-content">
-                    <a href="#">T-shirts</a>
-                    <a href="#">Hoodies</a>
-                    <a href="#">Underwear</a>
-                    <a href="#">Accesories</a>
-                </div>
-            </div>
-            <a href="#"><i class="bi bi-cart3"></i> Cart</a>
-            <a href="#"><i class="bi bi-person-circle"></i> Profile</a>
-        </div>
+        <button class="head-menu-open" id="open"><i class="bi bi-list"></i></i></button>
+        <nav class="navbar" id="navbar">
+            <button class="head-menu-close" id="close"><i class="bi bi-x-circle"></i></button>
+            <ul class="nav-list">
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbttn"><i class="bi bi-caret-down-fill"></i> Clothes</button>
+                        <div class="dropdown-content">
+                            <a href="#">T-shirts</a>
+                            <a href="#">Hoodies</a>
+                            <a href="#">Underwear</a>
+                            <a href="#">Accesories</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-push"><a href="#"><i class="bi bi-cart3"></i> Cart</a></li>
+                <li><a href="#"><i class="bi bi-person-circle"></i> Profile</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
@@ -49,5 +55,7 @@
             </ul>
         </nav>
     </footer>
+
+    <script src="./js/functions-main.js"></script>
 </body>
 </html>
